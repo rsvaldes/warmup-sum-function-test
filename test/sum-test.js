@@ -14,5 +14,15 @@ describe ('Sum', function() {
       expect(sum()).to.equal(0);
       assert.equal(sum(),0);
     });
-    
+
+    it('Should return undefined if argument is a negative number.', function() {
+      expect(sum(-1)).to.equal(undefined);
+      assert.isUndefined(sum(-1),'Negative numbers should be undefined');
+    });
+
+    it('Should include a return.', function () {
+      expect(sum()).to.include('return');
+      assert.include('return');
+    });
+
 });
